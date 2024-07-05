@@ -1,10 +1,8 @@
-export default function CreatorCard(props: {
-  name: string;
-  url: string;
-  description: string;
-  imageURL: string;
-}) {
+import Creator from "../types";
+
+export default function CreatorCard(props: Creator) {
   const { name, url, description, imageURL } = props;
+
   return (
     <a href={url}>
       <div>
