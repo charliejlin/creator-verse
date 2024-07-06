@@ -4,12 +4,12 @@ import ShowCreators from "./pages/ShowCreators";
 import ViewCreator from "./pages/ViewCreator";
 import EditCreator from "./pages/EditCreator";
 import AddCreator from "./pages/AddCreator";
-import Creator from "./types";
+import Creator, { CreatorList } from "./types";
 import { supabase } from "./client";
 import "./App.css";
 
 function App() {
-  const [creators, setCreators] = useState<Creator[]>([]);
+  const [creators, setCreators] = useState<CreatorList["creators"]>([]);
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
@@ -18,11 +18,10 @@ function App() {
 
   const getCreators = async () => {
     try {
-      const { data, error } = await supabase.from("creators").select();
-      if (error) {
-        throw new Error(String(error));
-      } else {
-        setCreators(data);
+      const { data } = await supabase.from("creators").select();
+      console.log(data);
+      if (data) {
+        setCreators(data as CreatorList["creators"]);
       }
     } catch (e) {
       throw e;
@@ -32,7 +31,7 @@ function App() {
   let routes = useRoutes([
     {
       path: "/",
-      element: <ShowCreators {...creators} />,
+      element: <ShowCreators creators={creators} />,
       children: [
         {
           path: "view/:id",
@@ -40,16 +39,17 @@ function App() {
         },
         {
           path: "edit/:id",
-          element: <EditCreator />,
+          element: <EditCreator {...creators} />,
         },
         {
           path: "add/:id",
-          element: <AddCreator />,
+          element: <AddCreator {...creators} />,
         },
       ],
     },
   ]);
-  return routes;
+
+  return <div>{routes}</div>;
 }
 
 export default App;

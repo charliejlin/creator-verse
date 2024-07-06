@@ -1,12 +1,16 @@
 import CreatorCard from "../components/CreatorCard";
-import Creator from "../types";
+import { CreatorList } from "../types";
 
-export default function ShowCreators(creators: Creator[]) {
+export default function ShowCreators({ creators }: CreatorList) {
   return (
     <div>
-      {creators.map((creator, index) => (
-        <CreatorCard {...creator} key={index} />
-      ))}
+      {creators.length != 0 ? (
+        creators.map((creator, index) => (
+          <CreatorCard {...creator} key={index} />
+        ))
+      ) : (
+        <p>There are no creators yet!</p>
+      )}
     </div>
   );
 }

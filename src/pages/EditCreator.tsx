@@ -1,1 +1,4 @@
-export default function EditCreator() {}
+import Creator from "../types";
+export default function EditCreator(creators: Creator[]) {
+  return <div></div>;
+}
