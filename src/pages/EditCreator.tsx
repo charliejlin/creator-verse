@@ -1,4 +1,11 @@
-import Creator from "../types";
-export default function EditCreator(creators: Creator[]) {
-  return <div></div>;
+import { useParams } from "react-router-dom";
+
+export default function EditCreator() {
+  const creatorId = useParams().creatorId;
+
+  return (
+    <div>
+      <p>{creatorId}</p>
+    </div>
+  );
 }

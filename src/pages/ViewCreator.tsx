@@ -1,4 +1,3 @@
-import Creator from "../types";
-export default function ViewCreator(creators: Creator[]) {
+export default function ViewCreator() {
   return <div></div>;
 }
