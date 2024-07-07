@@ -7,5 +7,5 @@ export default interface Creator {
   url: string;
   description: string;
   imageURL?: string;
-  id: number;
+  id?: number;
 }

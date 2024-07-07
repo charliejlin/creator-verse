@@ -4,6 +4,7 @@ import ShowCreators from "./pages/ShowCreators";
 import { CreatorList } from "./types";
 import { supabase } from "./client";
 import "./App.css";
+import AddCreator from "./pages/AddCreator";
 
 function App() {
   const [creators, setCreators] = useState<CreatorList["creators"]>([]);
@@ -28,8 +29,10 @@ function App() {
   return (
     <div>
       <h1>THE CREATORVERSE</h1>
+      <Link to={"/add"}>
+        <button>Add Creator</button>
+      </Link>
       <ShowCreators creators={creators} />
-      <Link to={`/edit/${id}`}>TO EDIT</Link>
     </div>
   );
 }
