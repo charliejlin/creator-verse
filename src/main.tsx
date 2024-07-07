@@ -6,6 +6,7 @@ import "./index.css";
 import EditCreator from "./pages/EditCreator.tsx";
 import ViewCreator from "./pages/ViewCreator.tsx";
 import AddCreator from "./pages/AddCreator.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="view">
           <Route path=":creatorId" element={<ViewCreator />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

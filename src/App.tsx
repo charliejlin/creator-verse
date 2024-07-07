@@ -4,12 +4,9 @@ import ShowCreators from "./pages/ShowCreators";
 import { CreatorList } from "./types";
 import { supabase } from "./client";
 import "./App.css";
-import AddCreator from "./pages/AddCreator";
 
 function App() {
   const [creators, setCreators] = useState<CreatorList["creators"]>([]);
-  const [error, setError] = useState<string>("");
-  const id = 0;
 
   useEffect(() => {
     getCreators();
@@ -18,6 +15,7 @@ function App() {
   const getCreators = async () => {
     try {
       const { data } = await supabase.from("creators").select();
+      console.log(data);
       if (data) {
         setCreators(data as CreatorList["creators"]);
       }
