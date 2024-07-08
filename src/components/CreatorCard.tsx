@@ -11,6 +11,7 @@ export default function CreatorCard(props: Creator) {
       <p>{url}</p>
       <p>{description}</p>
       <Link to={`/view/${id}`}>View More</Link>
+      <Link to={`/edit/${id}`}>Edit</Link>
     </div>
   );
 }

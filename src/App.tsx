@@ -17,7 +17,6 @@ function App() {
     try {
       setLoading(true);
       const { data } = await supabase.from("creators").select();
-      console.log(data);
       if (data) {
         setCreators(data as CreatorList["creators"]);
       }

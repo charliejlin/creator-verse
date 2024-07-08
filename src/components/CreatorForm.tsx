@@ -11,12 +11,18 @@ export default function CreatorForm({
   handleSubmit,
   user,
 }: CreatorForm) {
+  console.log(typeof user, user.name);
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input name="name" onChange={handleChange} value={user.name}></input>
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            value={user.name}
+          ></input>
         </label>
         <label>
           Social Media URL:
@@ -38,7 +44,7 @@ export default function CreatorForm({
             value={user.imageURL}
           ></input>
         </label>
-        <button type="submit">Add Creator</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
