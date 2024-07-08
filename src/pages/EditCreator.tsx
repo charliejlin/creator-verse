@@ -23,11 +23,11 @@ export default function EditCreator() {
     const { data } = await supabase
       .from("creators")
       .select("*")
-      .eq("id", creatorId);
+      .eq("id", creatorId)
+      .single();
     if (data) {
-      setUser(data[0] as unknown as Creator);
+      setUser(data as unknown as Creator);
     }
-    console.log(user);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

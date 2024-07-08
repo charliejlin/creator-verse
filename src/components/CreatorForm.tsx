@@ -22,11 +22,17 @@ export default function CreatorForm({
             name="name"
             onChange={handleChange}
             value={user.name}
+            required
           ></input>
         </label>
         <label>
           Social Media URL:
-          <input name="url" onChange={handleChange} value={user.url}></input>
+          <input
+            name="url"
+            onChange={handleChange}
+            value={user.url}
+            required
+          ></input>
         </label>
         <label>
           Description
@@ -34,6 +40,7 @@ export default function CreatorForm({
             name="description"
             onChange={handleChange}
             value={user.description}
+            required
           ></input>
         </label>
         <label>

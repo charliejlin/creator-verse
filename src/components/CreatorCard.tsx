@@ -6,7 +6,7 @@ export default function CreatorCard(props: Creator) {
 
   return (
     <div>
-      <img src={imageURL}></img>
+      <img src={imageURL} alt={`Invalid Image URL, Image of ${name}`}></img>
       <h1>{name}</h1>
       <p>{url}</p>
       <p>{description}</p>
