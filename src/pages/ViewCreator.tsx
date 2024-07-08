@@ -8,7 +8,7 @@ export default function ViewCreator() {
     name: "",
     url: "",
     description: "",
-    imageURL: "",
+    imageURL: undefined,
   });
 
   const creatorId = Number(useParams().creatorId);
@@ -32,10 +32,10 @@ export default function ViewCreator() {
 
   return (
     <div>
+      <img src={user.imageURL}></img>
       <p>{user.name}</p>
       <p>{user.url}</p>
       <p>{user.description}</p>
-      <p>{user.imageURL}</p>
     </div>
   );
 }

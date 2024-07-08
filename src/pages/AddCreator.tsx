@@ -9,7 +9,7 @@ export default function AddCreator() {
     name: "",
     url: "",
     description: "",
-    imageURL: "",
+    imageURL: undefined,
   });
   const navigate = useNavigate();
 

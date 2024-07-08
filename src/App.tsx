@@ -7,6 +7,7 @@ import "./App.css";
 
 function App() {
   const [creators, setCreators] = useState<CreatorList["creators"]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getCreators();
@@ -14,11 +15,13 @@ function App() {
 
   const getCreators = async () => {
     try {
+      setLoading(true);
       const { data } = await supabase.from("creators").select();
       console.log(data);
       if (data) {
         setCreators(data as CreatorList["creators"]);
       }
+      setLoading(false);
     } catch (e) {
       throw e;
     }
@@ -30,7 +33,11 @@ function App() {
       <Link to={"/add"}>
         <button>Add Creator</button>
       </Link>
-      <ShowCreators creators={creators} />
+      {loading ? (
+        <div>LOADING!!!!!!!!!</div>
+      ) : (
+        <ShowCreators creators={creators} />
+      )}
     </div>
   );
 }
