@@ -11,7 +11,6 @@ export default function CreatorForm({
   handleSubmit,
   user,
 }: CreatorForm) {
-  console.log(typeof user, user.name);
   return (
     <div>
       <form onSubmit={handleSubmit}>
