@@ -22,7 +22,13 @@ export default function AddCreator() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await supabase.from("creators").insert(user);
+    const http = "https://";
+    const userUrl = user.url;
+    if (user.url.substring(0, 8) != http) {
+      await supabase.from("creators").insert({ ...user, url: http + userUrl });
+    } else {
+      await supabase.from("creators").insert(user);
+    }
     navigate("/");
   };
 
