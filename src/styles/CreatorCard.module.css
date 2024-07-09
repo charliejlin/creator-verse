@@ -20,6 +20,10 @@
   background-color: transparent;
 }
 
+.cardContent > a {
+  width: 10%;
+}
+
 .cardContent > *,
 a > * {
   color: #f3e9dc;
