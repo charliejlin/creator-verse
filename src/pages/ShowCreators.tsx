@@ -27,13 +27,13 @@ export default function ShowCreators() {
   return (
     <div className={`${styles.pageContainer}`}>
       {loading ? (
-        <div>LOADING!!!!!!</div>
+        <div style={{ color: "#5e3023" }}>LOADING!!!!!!</div>
       ) : creators.length != 0 ? (
         creators.map((creator, index) => (
           <CreatorCard {...creator} key={index} />
         ))
       ) : (
-        <p>There are no creators yet!</p>
+        <p style={{ color: "#5e3023" }}>There are no creators yet!</p>
       )}
     </div>
   );

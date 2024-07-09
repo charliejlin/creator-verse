@@ -14,7 +14,11 @@ export default function CreatorForm({
 }: CreatorForm) {
   return (
     <div className={`${styles.container}`}>
-      <form onSubmit={handleSubmit} className={`${styles.form}`}>
+      <form
+        onSubmit={handleSubmit}
+        className={`${styles.form}`}
+        autoComplete="off"
+      >
         <label>
           Name:
           <input
