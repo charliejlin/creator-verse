@@ -25,7 +25,7 @@ export default function CreatorCard(props: Creator) {
             </Link>
           </div>
         </div>
-        <Link to={`https://${url}`} target="_blank">
+        <Link to={`${url}`} target="_blank">
           <CiLink id={`${styles.url}`} />
         </Link>
         <p>{description}</p>
