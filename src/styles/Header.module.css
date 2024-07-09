@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid black;
+}
+
+.container > h1 {
+  color: #5e3023;
+  margin-bottom: 1.5rem;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 3rem;
+}

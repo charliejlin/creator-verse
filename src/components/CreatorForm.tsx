@@ -1,4 +1,5 @@
 import Creator from "../types";
+import styles from "../styles/CreatorForm.module.css";
 
 interface CreatorForm {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -12,8 +13,8 @@ export default function CreatorForm({
   user,
 }: CreatorForm) {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={`${styles.container}`}>
+      <form onSubmit={handleSubmit} className={`${styles.form}`}>
         <label>
           Name:
           <input
@@ -34,7 +35,7 @@ export default function CreatorForm({
           ></input>
         </label>
         <label>
-          Description
+          Description:
           <input
             name="description"
             onChange={handleChange}
@@ -43,7 +44,7 @@ export default function CreatorForm({
           ></input>
         </label>
         <label>
-          Image Link
+          Image Link:
           <input
             name="imageURL"
             onChange={handleChange}

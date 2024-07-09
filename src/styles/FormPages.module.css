@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > label {
+  color: black;
+}
+
+.container > button {
+  padding-bottom: 1rem;
+  width: 100%;
+}

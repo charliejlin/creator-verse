@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { supabase } from "../client";
+import { CiLink } from "react-icons/ci";
+import Header from "../components/Header";
 import Creator from "../types";
+import styles from "../styles/ViewCreator.module.css";
 
 export default function ViewCreator() {
   const [user, setUser] = useState<Creator>({
@@ -31,11 +34,20 @@ export default function ViewCreator() {
   };
 
   return (
-    <div>
-      <img src={user.imageURL}></img>
-      <p>{user.name}</p>
-      <p>{user.url}</p>
-      <p>{user.description}</p>
+    <div className={`${styles.container}`}>
+      <Header />
+      <div className={`${styles.info}`}>
+        <div className={`${styles.imageContainer}`}>
+          <img src={user.imageURL}></img>
+        </div>
+        <div className={`${styles.text}`}>
+          <h2>{user.name}</h2>
+          <Link to={user.url}>
+            <CiLink />
+          </Link>
+          <p>{user.description}</p>
+        </div>
+      </div>
     </div>
   );
 }

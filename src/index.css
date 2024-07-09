@@ -1,0 +1,9 @@
+* {
+  background-color: #f3e9dc;
+  color: #c08552;
+}
+
+* > button {
+  background-color: #5e3023;
+  color: #f3e9dc;
+}

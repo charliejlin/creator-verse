@@ -1,10 +1,34 @@
 import CreatorCard from "../components/CreatorCard";
 import { CreatorList } from "../types";
+import styles from "../styles/ShowCreators.module.css";
+import { useState, useEffect } from "react";
+import { supabase } from "../client";
 
-export default function ShowCreators({ creators }: CreatorList) {
+export default function ShowCreators() {
+  const [creators, setCreators] = useState<CreatorList["creators"]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getCreators();
+  }, []);
+
+  const getCreators = async () => {
+    try {
+      setLoading(true);
+      const { data } = await supabase.from("creators").select();
+      if (data) {
+        setCreators(data as CreatorList["creators"]);
+      }
+      setLoading(false);
+    } catch (e) {
+      throw e;
+    }
+  };
   return (
-    <div>
-      {creators.length != 0 ? (
+    <div className={`${styles.pageContainer}`}>
+      {loading ? (
+        <div>LOADING!!!!!!</div>
+      ) : creators.length != 0 ? (
         creators.map((creator, index) => (
           <CreatorCard {...creator} key={index} />
         ))

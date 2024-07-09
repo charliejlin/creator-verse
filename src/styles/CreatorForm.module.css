@@ -1,0 +1,12 @@
+.form > label {
+  color: black;
+}
+
+.form > label > input {
+  background-color: rgb(255, 247, 238);
+  color: black;
+}
+
+.form > button {
+  background-color: #5e3023;
+}

@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Creator from "../types";
 import CreatorForm from "../components/CreatorForm";
+import Header from "../components/Header";
+import styles from "../styles/FormPages.module.css";
 
 export default function AddCreator() {
   const [user, setUser] = useState<Creator>({
@@ -25,7 +27,8 @@ export default function AddCreator() {
   };
 
   return (
-    <div>
+    <div className={`${styles.container}`}>
+      <Header />
       <CreatorForm
         handleSubmit={handleSubmit}
         handleChange={handleChange}

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Creator from "../types";
 import { supabase } from "../client";
 import CreatorForm from "../components/CreatorForm";
+import Header from "../components/Header";
+import styles from "../styles/FormPages.module.css";
 
 export default function EditCreator() {
   const creatorId = Number(useParams().creatorId);
@@ -58,7 +60,8 @@ export default function EditCreator() {
   };
 
   return (
-    <div>
+    <div className={`${styles.container}`}>
+      <Header />
       <CreatorForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}

@@ -2,15 +2,13 @@
 
 Submitted by: Charlie Lin
 
-About this web app: **👉🏿 app description here**
+About this web app: Creatorverse is a frontend web application designed to manage and showcase your favorite content creators. Built with React for the frontend and Supabase for the database, this app allows users to perform CRUD (Create, Read, Update, Delete) operations to manipulate the list of creators.
 
-Time spent: **👉🏿 X** hours
+Time spent: 20 hours
 
 ## Required Features
 
 The following **required** functionality is completed:
-
-<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
 
 - [x] **A logical component structure in React is used to create the frontend of the app**
 - [x] **At least five content creators are displayed on the homepage of the app**
@@ -24,13 +22,16 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Picocss is used to style HTML elements
-- [ ] The content creator items are displayed in a creative format, like cards instead of a list
-- [ ] An image of each content creator is shown on their content creator card
+- [x] Picocss is used to style HTML elements
+- [x] The content creator items are displayed in a creative format, like cards instead of a list
+- [x] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [x] Used Typescript for additional type safety
+- [x] A loading screen while waiting for a response from the database
+- [x] Icons from react-icons
+- [x] A default 'No Image' is provided for creators with an undefined image link
 
 ## Video Walkthrough
 
