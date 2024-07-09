@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ShowCreators from "./pages/ShowCreators";
 import Header from "./components/Header";
 import "@picocss/pico/css/pico.min.css";

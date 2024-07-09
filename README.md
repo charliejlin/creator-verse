@@ -32,6 +32,7 @@ The following **additional** features are implemented:
 - [x] A loading screen while waiting for a response from the database
 - [x] Icons from react-icons
 - [x] A default 'No Image' is provided for creators with an undefined image link
+- [x] Used a .env file to hide database URL and api key
 
 ## Video Walkthrough
 
