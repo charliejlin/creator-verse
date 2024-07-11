@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="RNRRCWJ"><a href="https://imgur.com/RNRRCWJ">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src="https://github.com/charliejlin/creator-verse/blob/main/public/prework_walkthrough.gif" alt="Walkthrough GIF" >
 
 
 <!-- Replace this with whatever GIF tool you used! -->
