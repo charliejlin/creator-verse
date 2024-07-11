@@ -42,7 +42,7 @@ export default function ViewCreator() {
         </div>
         <div className={`${styles.text}`}>
           <h2>{user.name}</h2>
-          <Link to={user.url}>
+          <Link to={user.url} target="_blank">
             <CiLink />
           </Link>
           <p>{user.description}</p>
