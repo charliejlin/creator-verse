@@ -52,7 +52,8 @@ GIF created with ... [Kap](https://getkap.co/)
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+- Had to refresh on react router (Primarily used Next.js for routing/frontend)
+- First time using Supabase, but I was able to figure it out
 
 ## License
 
